@@ -10,3 +10,4 @@
 - Adds a storage safety guard so non-`local-lvm` builds require explicit opt-in.
 - Switches the template disk to `virtio-scsi-single` with `iothread=1`.
 - Fixes Debian-specific doc drift and makes the example custom network config safer for `en*` interface names.
+- Records successful creation and conversion of the Debian 13 template at VMID `9013`.
