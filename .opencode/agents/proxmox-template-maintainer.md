@@ -16,11 +16,13 @@ Current template contract:
 - Cloud image: `debian-13-genericcloud-amd64.qcow2`
 - Cloud-init user: `debian`
 - Preferred storage: `local-lvm`
+- Default template disk size: `8G`
 
 Proxmox build assumptions:
 - Use `ovmf` with `q35`.
 - Use `virtio-scsi-single`.
 - Configure the imported boot disk on `scsi0` with `iothread=1`.
+- Keep the template disk intentionally small and grow clone disks later when needed.
 - Keep boot order on `scsi0`.
 - Enable the Proxmox guest agent on the VM definition and install the package inside the guest.
 

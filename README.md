@@ -13,6 +13,7 @@ This repository stays focused on template creation only. Future OpenTofu and Ans
 | Image | `debian-13-genericcloud-amd64.qcow2` |
 | Storage | `local-lvm` |
 | Bridge | `vmbr0` |
+| Disk size | `8G` |
 | Cloud-init user | `debian` |
 
 ## Quick Start
@@ -42,3 +43,5 @@ Then convert it:
 ```bash
 ./scripts/convert-to-template.sh
 ```
+
+The template keeps a small `8G` disk by default. Debian is leaner than Ubuntu, so this keeps similar practical headroom to a `10G` Ubuntu template while still allowing clone disks to grow later in OpenTofu or other consumers.
